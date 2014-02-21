@@ -14,8 +14,8 @@ import com.github.gabrielcs.bench.domain.GithubRepository
 
 class GithubRepositoryReader(owner: String, name: String, var maxDepth: Int) {
 
-  var repositoryId: RepositoryId = new RepositoryId(owner, name)
-  var contentsService: ContentsService = new ContentsService()
+  var repositoryId = new RepositoryId(owner, name)
+  var contentsService = new ContentsService()
 
   def read: GithubRepository = {
     val githubRepository = new GithubRepository(repositoryId.getOwner, repositoryId.getName)
