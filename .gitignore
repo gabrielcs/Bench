@@ -2,6 +2,7 @@
 .settings/
 bin/
 target/
+.cache
 .classpath
 .gitattributes
 .project
