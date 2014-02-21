@@ -1,8 +1,8 @@
 package com.github.gabrielcs.bench
 
 object Application extends App {
-  val ownerName = "gabrielcs"
-  val repositoryName = "RdioJsApi-SimplePlayer-Play2-ThinWrapper"
+  val ownerName = "10sheet"
+  val repositoryName = "interview-repo"
 
   val depth = getDepth(args)
   val reader = new GithubRepositoryReader(ownerName, repositoryName, depth)
