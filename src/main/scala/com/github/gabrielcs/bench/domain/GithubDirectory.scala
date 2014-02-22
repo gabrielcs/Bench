@@ -3,8 +3,8 @@ package com.github.gabrielcs.bench.domain
 class GithubDirectory(path: String, var name: String)
   extends GithubContent(path) with Comparable[GithubDirectory] {
 
-  var subDirectories = Seq[GithubDirectory]()
-  var files = Seq[GithubFile]()
+  private var subDirectories = Seq[GithubDirectory]()
+  private var files = Seq[GithubFile]()
 
   def getSubDirectories: Seq[GithubDirectory] = {
     subDirectories.sorted

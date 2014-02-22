@@ -19,8 +19,7 @@ class GithubRepositoryReader(owner: String, name: String, var maxDepth: Int) {
 
   def read: GithubRepository = {
     val githubRepository = new GithubRepository(repositoryId.getOwner, repositoryId.getName)
-    val rootDirectory = githubRepository.rootDirectory
-    readDirectoryContent(rootDirectory, "")
+    readDirectoryContent(githubRepository.rootDirectory, "")
     githubRepository
   }
 

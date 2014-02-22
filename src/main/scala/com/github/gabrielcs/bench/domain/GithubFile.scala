@@ -5,5 +5,5 @@ class GithubFile(path: String, var name: String, var size: Long)
 
   // bigger sizes first
   override def compareTo(otherFile: GithubFile): Int =
-    -this.size.compareTo(otherFile.size)
+    - size.compareTo(otherFile.size)
 }
