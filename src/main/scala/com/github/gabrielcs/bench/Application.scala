@@ -15,7 +15,7 @@ object Application extends App {
 
   def getDepth(args: Array[String]): Int = {
     val depth = Try(args(0).toInt)
-    
+
     depth match {
       case Failure(thrown) => {
         println("Error: couldn't read \"depth of the output\"")
@@ -23,12 +23,12 @@ object Application extends App {
       }
       case Success(s) => {
         if (s < 1) {
-        	println("Error: \"depth of the output\" should be 1 or higher")
-        	System.exit(0)
+          println("Error: \"depth of the output\" should be 1 or higher")
+          System.exit(0)
         }
       }
     }
-    
+
     depth.get
   }
 }
